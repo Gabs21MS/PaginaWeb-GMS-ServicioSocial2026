@@ -13,7 +13,7 @@
     <h1 id="app-title" onclick="mostrarMenu()">Épocas de Zumpango de Ocampo</h1>
   </header>
 
-  <!-- SECCIÓN INTRODUCTORIA: Colocada justo debajo de lo anaranjado y antes de las épocas -->
+  <!-- Sección Introductoria -->
   <section class="seccion-intro">
     <div class="intro-texto">
       <h2>Bienvenidos a la Historia de Zumpango</h2>
@@ -25,13 +25,24 @@
     </div>
     
     <div class="intro-imagenes">
-      <!-- Recuerda actualizar las rutas de tus imágenes -->
-      <img src="C:\Users\gabym\Documents\Proyectot_ServicioSocial\Monumentos_Historicos\EscudoZum.png" alt="Paisaje histórico de Zumpango" class="img-no-interactiva">
-      <img src="C:\Users\gabym\Documents\Proyectot_ServicioSocial\Monumentos_Historicos\CasaEscudo.png" class="img-no-interactiva">
+      <img src="https://via.placeholder.com/150" alt="Paisaje histórico de Zumpango" class="img-no-interactiva">
+      <img src="https://via.placeholder.com/150" alt="Detalle cultural de Zumpango" class="img-no-interactiva">
     </div>
   </section>
 
-  <!-- Contenedor donde app.js carga las tarjetas de las épocas -->
+  <!-- Sección de Búsqueda por palabras clave -->
+  <section class="seccion-busqueda">
+    <div class="contenedor-busqueda">
+      <input 
+        type="text" 
+        id="input-busqueda" 
+        placeholder="Buscar por palabra clave (ej. iglesia, san pedro, laguna...)"
+      >
+      <button id="btn-buscar" type="button">Buscar</button>
+    </div>
+  </section>
+
+  <!-- Contenedor donde app.js carga las tarjetas de las épocas o resultados -->
   <main id="app">
     <!-- El contenido dinámico se cargará mediante app.js -->
   </main>
