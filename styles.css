@@ -1,3 +1,4 @@
+/* --- Estilos Generales y Cabecera --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,47 +7,50 @@
 }
 
 body {
-  background-color: #f4f6f8;
+  background-color: #f4f4f9;
   color: #333;
 }
 
 header {
-  background-color: #FF4500;
-  color: #fff;
-  padding: 1.5rem;
+  background-color: #e65100;
+  color: white;
+  padding: 1rem 2rem;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header h1 {
   cursor: pointer;
-}
-
-main {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  font-size: 1.8rem;
 }
 
 /* --- Estilos para la Sección Introductoria --- */
 .seccion-intro {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+  flex-direction: row;
+  flex-wrap: wrap; 
   gap: 30px;
-  max-width: 1200px; /* Ajusta este valor al ancho máximo de tu página */
-  margin: 0 auto 40px auto; /* Centra la sección y da espacio hacia abajo */
+  max-width: 1100px;
+  margin: 2rem auto 1rem auto;
   padding: 20px;
-  background-color: #fcfcfc; /* Un fondo muy sutil para resaltarlo */
+  background-color: #fcfcfc; 
   border-radius: 10px;
-  align-items: center; /* Centra el contenido verticalmente */
+  align-items: stretch;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .intro-texto {
-  flex: 1 1 400px; /* Crece y se encoge adaptándose, con un mínimo de 400px */
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
 }
 
 .intro-texto h2 {
-  color: #e65100; /* Un color similar al naranja de tu barra superior */
+  color: #e65100; 
   margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .intro-texto p {
@@ -56,130 +60,152 @@ main {
 }
 
 .intro-imagenes {
-  flex: 1 1 300px;
+  flex: 1 1 40%;
   display: flex;
   gap: 15px;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.intro-imagenes img.img-no-interactiva {
+  width: auto;
+  max-width: 50%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  pointer-events: none; 
+  user-select: none; 
+  -webkit-user-drag: none;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Estilos para el Buscador --- */
+.seccion-busqueda {
+  max-width: 1100px;
+  margin: 1rem auto 2rem auto;
+  padding: 0 20px;
+}
+
+.contenedor-busqueda {
+  display: flex;
+  gap: 10px;
   justify-content: center;
 }
 
-/* Estilos específicos para hacer las imágenes no interactivas */
-.img-no-interactiva {
-  max-width: 100%;
-  height: auto;
+.contenedor-busqueda input {
+  flex: 1;
+  max-width: 500px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  pointer-events: none; /* Desactiva clics y efectos hover */
-  user-select: none; /* Evita que el usuario seleccione la imagen */
-  -webkit-user-drag: none; /* Evita que la imagen se pueda arrastrar (drag & drop) */
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.menu-container h2,
-.subtitulo-seccion {
-  margin-bottom: 1.5rem;
-  text-align: center;
+.contenedor-busqueda input:focus {
+  border-color: #e65100;
 }
 
-/* Grids reutilizables para Épocas y Lugares */
-.grid-epocas,
-.grid-lugares {
+.contenedor-busqueda button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #e65100;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contenedor-busqueda button:hover {
+  background-color: #bf360c;
+}
+
+/* --- Estilos para el Contenido Principal y Tarjetas --- */
+main {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 20px;
+}
+
+.grid-epocas, .grid-lugares {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 20px;
 }
 
-.card-epoca,
-.card-lugar {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-epoca:hover,
-.card-lugar:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.card-epoca img,
-.card-lugar img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1.2rem;
-}
-
-.tag-periodo,
-.tag-ubicacion {
-  font-size: 0.8rem;
-  color: #e67e22;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.card-content h3 {
-  margin: 0.4rem 0;
-  color: #2c3e50;
-}
-
-.card-content p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Vista Detalle */
-.detalle-container {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.btn-volver {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-}
-
-.btn-volver:hover {
-  background: #2980b9;
-}
-
-.imagen-banner {
-  width: 100%;
-  max-height: 380px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 1.5rem 0;
-}
-
-.detalle-body h3 {
-  margin: 1.5rem 0 0.8rem;
-}
-
-.detalle-body ul {
-  padding-left: 1.5rem;
-  line-height: 1.8;
-}
-
-.descripcion-extensa {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #444;
-}
+/* Centrar la cuarta tarjeta en pantallas de escritorio */
 @media (min-width: 900px) {
   .grid-epocas .card-epoca:nth-child(4) {
-    grid-column: 2; /* Obliga a la tarjeta a posicionarse en la columna del medio */
+    grid-column: 2;
+  }
+}
+
+.card-epoca, .card-lugar {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card-epoca:hover, .card-lugar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card-lugar img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-epoca h3, .card-lugar h3 {
+  color: #e65100;
+  margin-bottom: 10px;
+}
+
+.btn-regresar {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-regresar:hover {
+  background-color: #333;
+}
+
+/* Responsividad en Celulares */
+@media (max-width: 768px) {
+  .seccion-intro {
+    flex-direction: column;
+  }
+  .intro-texto {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .intro-imagenes {
+    justify-content: center;
+  }
+  .intro-imagenes img.img-no-interactiva {
+    max-height: 200px;
+  }
+  .contenedor-busqueda {
+    flex-direction: column;
+  }
+  .contenedor-busqueda input {
+    max-width: 100%;
   }
 }
