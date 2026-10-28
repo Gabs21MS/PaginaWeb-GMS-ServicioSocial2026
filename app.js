@@ -30,7 +30,7 @@ const epocasData = [
         id: "teocalli-zumpango",
         nombre: "Templo Mayor Prehispánico",
         imagen: "https://via.placeholder.com/300x180",
-        resumen: "Centro ceremonial ceremonial en la cuenca.",
+        resumen: "Centro ceremonial en la cuenca.",
         descripcion: "Espacio dedicado a rituales agrícolas y tributarios.",
         hitos: ["Centro religioso", "Tributo Mexica"]
       }
@@ -59,6 +59,49 @@ const epocasData = [
     ]
   },
   {
+    id: "curiosidades-toponimia",
+    titulo: "Curiosidades y Toponimia",
+    lugares: [
+      {
+        id: "origen-tzompanco",
+        nombre: "Denominación y Significado",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "El origen náhuatl de la palabra Zumpango y su relación con la sabiduría.",
+        descripcion: "Zumpango deriva del náhuatl 'Tzompanco', que significa 'El lugar del tzompantli'. Un tzompantli era un monumento de cráneos que servía como reconocimiento póstumo a personalidades destacadas por su sabiduría y obras. También se asocia al árbol tzompancuahuitl (colorín), que en el pensamiento anahuaca representa el tiempo de la sabiduría humana.",
+        hitos: [
+          "Tzompanco: Lugar del tzompantli", 
+          "Tzompancuahuitl: Tiempo de la sabiduría", 
+          "Güachichil: Árbol colorín"
+        ]
+      },
+      {
+        id: "jeroglifico-municipal",
+        nombre: "El Jeroglífico Municipal",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Los elementos visuales y el profundo significado de los colores del escudo.",
+        descripcion: "El jeroglífico oficial es un cráneo humano ensartado en un palo horizontal sostenido por dos palos verticales (Tzompantli), enmarcado en una figura que dice 'co' (lugar). Cada color tiene un significado: el rojo es la sabiduría, el blanco es el principio y la luz, el azul del fondo evoca la laguna y la base negra simboliza el Mictlán o descanso eterno.",
+        hitos: [
+          "Cráneo rojo: Sabiduría", 
+          "Fondo azul: La laguna de Zumpango", 
+          "Base negra: Mictlán (Eterno reposo)"
+        ]
+      },
+      {
+        id: "toponimos-barrios",
+        nombre: "Topónimos de Localidades",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "El significado original de los barrios y pueblos que conforman el territorio.",
+        descripcion: "Diversos puntos geográficos conservan su raíz náhuatl, describiendo su entorno natural o histórico. Destacan lugares cercanos a la laguna y elementos del paisaje que fueron vitales para los antiguos pobladores.",
+        hitos: [
+          "Atenco: Lugar a la orilla del agua", 
+          "Cuautlalpan: Tierra energizada por el sol", 
+          "Coyocalco: Lugar de la casa del coyote", 
+          "Zitlaltepec: Ciudad del firmamento nocturno"
+        ]
+      }
+    ]
+  },
+  {
     id: "edad-moderna",
     titulo: "Edad Moderna y Contemporánea",
     lugares: [
@@ -76,6 +119,12 @@ const epocasData = [
 
 // Muestra el menú principal con las épocas
 function mostrarMenu() {
+  // 1. Mostrar la sección introductoria al volver al menú principal
+  const intro = document.querySelector('.seccion-intro');
+  if (intro) {
+    intro.style.display = 'flex'; 
+  }
+
   const contenedor = document.getElementById('app');
   let html = `<div class="grid-epocas">`;
 
@@ -94,6 +143,12 @@ function mostrarMenu() {
 
 // Muestra los lugares de una época específica
 function mostrarEpoca(idEpoca) {
+  // 2. Ocultar la sección introductoria al entrar a una época
+  const intro = document.querySelector('.seccion-intro');
+  if (intro) {
+    intro.style.display = 'none';
+  }
+
   const epoca = epocasData.find(e => e.id === idEpoca);
   if (!epoca) return;
 
@@ -150,6 +205,12 @@ function buscarPorPalabraClave() {
 
 // Renderiza los resultados encontrados por el buscador
 function mostrarResultadosBusqueda(resultados, termino) {
+  // 3. Ocultar introducción durante la visualización de resultados de búsqueda
+  const intro = document.querySelector('.seccion-intro');
+  if (intro) {
+    intro.style.display = 'none';
+  }
+
   const contenedorApp = document.getElementById('app');
   contenedorApp.innerHTML = '';
 
