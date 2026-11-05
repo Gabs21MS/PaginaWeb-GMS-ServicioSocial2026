@@ -138,13 +138,6 @@ main {
   gap: 20px;
 }
 
-/* Centrar la cuarta tarjeta en pantallas de escritorio */
-@media (min-width: 900px) {
-  .grid-epocas .card-epoca:nth-child(4) {
-    grid-column: 2;
-  }
-}
-
 .card-epoca, .card-lugar {
   background: white;
   border-radius: 10px;
@@ -152,6 +145,9 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card-epoca:hover, .card-lugar:hover {
@@ -185,6 +181,90 @@ main {
 
 .btn-regresar:hover {
   background-color: #333;
+}
+
+/* --- Estilos para la Vista Detallada (Diseño Amplio) --- */
+.tarjeta-detalle {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 0 auto 30px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.tarjeta-detalle h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.tarjeta-detalle .subtitulo {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.tarjeta-detalle .img-detalle {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.tarjeta-detalle .descripcion {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.tarjeta-detalle h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.tarjeta-detalle ul {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
+.tarjeta-detalle ul li {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.btn-azul {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-azul:hover {
+  background-color: #2980b9;
+}
+
+/* --- Responsividad y Media Queries --- */
+
+/* Centrar la cuarta tarjeta en pantallas de escritorio */
+@media (min-width: 900px) {
+  .grid-epocas .card-epoca:nth-child(4) {
+    grid-column: 2;
+  }
 }
 
 /* Responsividad en Celulares */
