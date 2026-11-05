@@ -98,6 +98,77 @@ const epocasData = [
           "Coyocalco: Lugar de la casa del coyote", 
           "Zitlaltepec: Ciudad del firmamento nocturno"
         ]
+      },
+      {
+        id: "localizacion-extension",
+        nombre: "Localización y Extensión Geográfica",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Coordenadas exactas, límites territoriales y superficie total de Zumpango.",
+        descripcion: "El municipio se localiza a 40 kilómetros al norte de la Ciudad de México. Limita con municipios como Tequixquiac, Hueypoxtla, Tecámac y Cuautitlán, y con Tizayuca (Hidalgo). Su extensión territorial abarca un total de 244.08 kilómetros cuadrados.",
+        hitos: [
+          "Superficie: 244.08 km²", 
+          "Ubicación: 40 km al norte del D.F. (CDMX)", 
+          "Límites: Colinda con Edomex y un municipio de Hidalgo (Tizayuca)"
+        ]
+      },
+      {
+        id: "topografia-relieve",
+        nombre: "Topografía del Territorio",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Distribución del relieve entre lomas, mesas y llanuras planas.",
+        descripcion: "El terreno de Zumpango está dividido en dos zonas principales. La mitad norte se caracteriza por lomas y formación de mesas, destacando una elevación llamada Cuaquemec al oriente. La mitad sur se transforma en un territorio llano con un ligero declive hacia el poniente, donde se asienta la laguna.",
+        hitos: [
+          "Norte: Lomas y mesas", 
+          "Oriente: Elevación Cuaquemec", 
+          "Sur/Poniente: Terreno plano y zona de laguna"
+        ]
+      },
+      {
+        id: "altitud-promedio",
+        nombre: "Altitud sobre el Nivel del Mar",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "La altura promedio de la región plana y de la cuenca lacustre.",
+        descripcion: "En general, la parte plana del municipio de Zumpango se encuentra a una altitud promedio de 2,250 metros sobre el nivel del mar (msnm). Específicamente, el vaso o cuenca de la laguna de Zumpango está a 2,245 msnm, mientras que las zonas de lomas tienen una altitud mayor.",
+        hitos: [
+          "Promedio en llanura: 2,250 msnm", 
+          "Laguna de Zumpango: 2,245 msnm"
+        ]
+      },
+      {
+        id: "geologia-terciaria-cuaternaria",
+        nombre: "Geología del Territorio",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Composición del suelo desde la provincia del eje neovolcánico.",
+        descripcion: "Zumpango se asienta en la provincia del eje neovolcánico. El 80% de su territorio corresponde al periodo cuaternario con depósitos lacustres y sedimentos de aluvión. Al norte y poniente existen formaciones más antiguas del periodo terciario, incluyendo rocas clásticas y depósitos de basaltos colados (3%).",
+        hitos: [
+          "80% Periodo Cuaternario: Sedimentos de aluvión", 
+          "Formaciones rocosas al norte (Cuevas y Tequixquiac)", 
+          "Basaltos colados cerca de la laguna"
+        ]
+      },
+      {
+        id: "division-politica-actual",
+        nombre: "División Política y Organización",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "La estructura territorial y las comunidades que conforman al municipio.",
+        descripcion: "El municipio se compone de una ciudad cabecera, seis pueblos, una ranchería, colonias agrícolas, unidades habitacionales, granjas y ejidos. Destaca la presencia de la base aérea militar y las zonas de desagüe del valle de México. En total, suma 36 localidades principales que organizan la vida comunitaria y económica.",
+        hitos: [
+          "1 ciudad (Cabecera municipal)", 
+          "6 pueblos y 1 ranchería", 
+          "Incluye una base aérea militar"
+        ]
+      },
+      {
+        id: "orografia-cerros",
+        nombre: "Orografía y Elevaciones Principales",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Los cerros y elevaciones que contrastan con la planicie de la laguna.",
+        descripcion: "Aunque la mitad del territorio es plano con un ligero valle, la otra mitad norte presenta lomas importantes. Destacan el cerro Cuaqueméquez (2,350 msnm), el cerro Xóloc (2,470 msnm) y una serie de once mesas al poniente. La elevación mayor es el cerro Zitlaltepetl, que alcanza los 2,660 metros sobre el nivel del mar.",
+        hitos: [
+          "Cerro Zitlaltepetl: El punto más alto (2,660 msnm)", 
+          "Cerro Xóloc: Frontera con Tecámac (2,470 msnm)", 
+          "Cerro Cuaqueméquez (2,350 msnm)"
+        ]
       }
     ]
   },
@@ -141,30 +212,36 @@ function mostrarMenu() {
   contenedor.innerHTML = html;
 }
 
-// Muestra los lugares de una época específica
+// Muestra los lugares de una época específica con diseño amplio
 function mostrarEpoca(idEpoca) {
-  // 2. Ocultar la sección introductoria al entrar a una época
   const intro = document.querySelector('.seccion-intro');
-  if (intro) {
-    intro.style.display = 'none';
-  }
+  if (intro) intro.style.display = 'none';
 
   const epoca = epocasData.find(e => e.id === idEpoca);
   if (!epoca) return;
 
   const contenedor = document.getElementById('app');
-  let html = `
-    <button class="btn-regresar" onclick="mostrarMenu()">← Volver a Menú de Épocas</button>
-    <h2 style="margin-bottom: 20px;">${epoca.titulo}</h2>
-    <div class="grid-lugares">
-  `;
+  let html = `<div class="contenedor-detalles">`;
 
-  epoca.lugares.forEach(lugar => {
+  // Iteramos sobre cada lugar para crear una tarjeta ancha por cada uno
+  epoca.lugares.forEach((lugar, index) => {
     html += `
-      <article class="card-lugar">
-        <img src="${lugar.imagen}" alt="${lugar.nombre}">
-        <h3>${lugar.nombre}</h3>
-        <p>${lugar.resumen}</p>
+      <article class="tarjeta-detalle">
+        <!-- El botón de regresar solo se muestra en la primera tarjeta -->
+        ${index === 0 ? `<button class="btn-azul" onclick="mostrarMenu()">← Volver al Menú</button>` : ''}
+        
+        <h2>${lugar.nombre}</h2>
+        <p class="subtitulo">${lugar.resumen}</p>
+        
+        <!-- Muestra la imagen si existe -->
+        <img src="${lugar.imagen}" alt="${lugar.nombre}" class="img-detalle">
+        
+        <p class="descripcion">${lugar.descripcion}</p>
+        
+        <h3>Hitos Destacados</h3>
+        <ul>
+          ${lugar.hitos ? lugar.hitos.map(hito => `<li>${hito}</li>`).join('') : ''}
+        </ul>
       </article>
     `;
   });
@@ -203,42 +280,48 @@ function buscarPorPalabraClave() {
   mostrarResultadosBusqueda(resultados, texto);
 }
 
-// Renderiza los resultados encontrados por el buscador
+// Renderiza los resultados encontrados por el buscador con diseño amplio
 function mostrarResultadosBusqueda(resultados, termino) {
-  // 3. Ocultar introducción durante la visualización de resultados de búsqueda
   const intro = document.querySelector('.seccion-intro');
-  if (intro) {
-    intro.style.display = 'none';
-  }
+  if (intro) intro.style.display = 'none';
 
   const contenedorApp = document.getElementById('app');
   contenedorApp.innerHTML = '';
 
   if (resultados.length === 0) {
     contenedorApp.innerHTML = `
-      <div style="text-align: center; padding: 40px;">
-        <button class="btn-regresar" onclick="mostrarMenu()">← Volver a Menú de Épocas</button>
-        <h3>No se encontraron resultados para "${termino}"</h3>
-        <p>Prueba con términos como <strong>"iglesia"</strong>, <strong>"san pedro"</strong>, <strong>"laguna"</strong> o <strong>"templo"</strong>.</p>
+      <div class="tarjeta-detalle" style="text-align: center;">
+        <button class="btn-azul" onclick="mostrarMenu()">← Volver al Menú</button>
+        <h3 style="margin-top: 20px;">No se encontraron resultados para "${termino}"</h3>
+        <p>Prueba con términos como "iglesia", "san pedro", "laguna" o "templo".</p>
       </div>
     `;
     return;
   }
 
   let htmlResultados = `
-    <button class="btn-regresar" onclick="mostrarMenu()">← Volver a Menú de Épocas</button>
-    <h2 style="text-align: center; margin-bottom: 20px;">
-      Resultados de búsqueda para: "<em>${termino}</em>"
-    </h2>
-    <div class="grid-lugares">
+    <div class="contenedor-detalles">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h2>Resultados para: "<em>${termino}</em>"</h2>
+      </div>
   `;
 
-  resultados.forEach(lugar => {
+  resultados.forEach((lugar, index) => {
     htmlResultados += `
-      <article class="card-lugar">
-        <img src="${lugar.imagen}" alt="${lugar.nombre}">
-        <h3>${lugar.nombre}</h3>
-        <p>${lugar.resumen}</p>
+      <article class="tarjeta-detalle">
+        ${index === 0 ? `<button class="btn-azul" onclick="mostrarMenu()">← Volver al Menú</button>` : ''}
+        
+        <h2>${lugar.nombre}</h2>
+        <p class="subtitulo">${lugar.resumen}</p>
+        
+        <img src="${lugar.imagen}" alt="${lugar.nombre}" class="img-detalle">
+        
+        <p class="descripcion">${lugar.descripcion}</p>
+        
+        <h3>Hitos Destacados</h3>
+        <ul>
+          ${lugar.hitos ? lugar.hitos.map(hito => `<li>${hito}</li>`).join('') : ''}
+        </ul>
       </article>
     `;
   });
