@@ -189,7 +189,7 @@ const epocasData = [
       },
       {
         id: "1567",
-        nombre: "1567 d.C.: Concesión de una usadera para el hospital de la comunidads",
+        nombre: "1567 d.C.: Concesión de una usadera para el hospital de la comunidad",
         imagen: "https://via.placeholder.com/300x180"
       },
       {
@@ -385,6 +385,21 @@ const epocasData = [
           "Cerro Xóloc: Frontera con Tecámac (2,470 msnm)", 
           "Cerro Cuaqueméquez (2,350 msnm)"
         ]
+      },
+      {
+        id: "Zitlaltepetl",
+        nombre: "Cerro Zitlaltepetl: El punto más alto (2,660 msnm)",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "Xóloc",
+        nombre: "Cerro Xóloc: Frontera con Tecámac (2,470 msnm)",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "Cuaqueméquez",
+        nombre: "Cerro Cuaqueméquez (2,350 msnm)",
+        imagen: "https://via.placeholder.com/300x180"
       }
     ]
   },
