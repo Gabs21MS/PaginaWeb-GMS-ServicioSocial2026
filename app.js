@@ -19,6 +19,45 @@ const epocasData = [
         resumen: "Restos de asentamientos antiguos.",
         descripcion: "Puntos estratégicos para las rutas comerciales de la cuenca.",
         hitos: ["Intercambio comercial", "Ruta de tránsito"]
+      },
+      {
+        id: "cronologia-poblamiento",
+        nombre: "Cronología de los Primeros Pobladores",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Fases de ocupación sedentaria y desarrollo cultural al oriente de la laguna.",
+        descripcion: "Las investigaciones del arqueólogo Jeffrey R. Parsons indican que la ocupación inicial de la región se localizó al oriente de la laguna de Zumpango. Los primeros grupos de ocupación sedentaria se establecieron durante la fase Petlachique-Tzacualli. A partir de ahí, el poblamiento fue continuo a través de diversas etapas culturales hasta la época Azteca.",
+        hitos: [
+          "Fase Petlachique-Tzacualli: 200 a.C. - 100 d.C.",
+          "Periodo Clásico: 100 - 700 d.C.",
+          "Coyotlatelco: 700 - 900 d.C.",
+          "Mazapan: 900 - 1110 d.C.",
+          "Azteca: 1150 - 1520 d.C."
+        ]
+      },
+      {
+        id: "fase-petlachique",
+        nombre: "Fase Petlachique-Tzacualli: 200 a.C. - 100 d.C.",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "fase-clasico",
+        nombre: "Periodo Clásico: 100 - 700 d.C.",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "fase-coyotlatelco",
+        nombre: "Coyotlatelco: 700 - 900 d.C.",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "fase-mazapan",
+        nombre: "Mazapan: 900 - 1110 d.C.",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "fase-azteca",
+        nombre: "Azteca: 1150 - 1520 d.C.",
+        imagen: "https://via.placeholder.com/300x180"
       }
     ]
   },
@@ -33,6 +72,43 @@ const epocasData = [
         resumen: "Centro ceremonial en la cuenca.",
         descripcion: "Espacio dedicado a rituales agrícolas y tributarios.",
         hitos: ["Centro religioso", "Tributo Mexica"]
+      },
+      {
+        id: "cronologia-prehispanica",
+        nombre: "Cronología y Organización Prehispánica",
+        imagen: "https://via.placeholder.com/300x180", 
+        resumen: "Línea del tiempo y estructura sociopolítica del Zumpango prehispánico.",
+        descripcion: "La época prehispánica en Tzompanco se caracterizó por la organización en calpullis y señoríos. Destaca el asentamiento de la familia tenochca y la consolidación política de la región bajo el dominio mexica y posteriormente la dominación española.",
+        hitos: [
+          "1216 d.C.: Asentamiento de la familia tenochca en el territorio de Tzompanco",
+          "1362 d.C.: Origen de la dinastía tlahtoani de los mexica (unión de Iluicaltl y Tlacapatzin)",
+          "1520 d.C.: Límite de la tradición oral anahuaca y asedio de la soldadesca española a Tzompanco"
+        ]
+      },
+      {
+        id: "1216",
+        nombre: "1216 d.C.: Asentamiento de la familia tenochca en el territorio de Tzompanco",
+        imagen: "https://via.placeholder.com/300x180"
+      }, 
+      {
+        id: "1362",
+        nombre: "1362 d.C.: Origen de la dinastía tlahtoani de los mexica (unión de Iluicaltl y Tlacapatzin)",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1520",
+        nombre: "1520 d.C.: Límite de la tradición oral anahuaca y asedio de la soldadesca española a Tzompanco",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "cronologia-historica-zumpango",
+        nombre: "De Tzompanco al Virreinato",
+        imagen: "https://via.placeholder.com/300x180",
+        resumen: "Línea del tiempo que abarca el señorío prehispánico, la conquista y el desarrollo colonial.",
+        descripcion: "Los documentos registran una transición profunda en la región: desde los asentamientos tenochcas regidos por calpullis y señoríos, hasta la drástica reestructuración política, eclesiástica y territorial impuesta durante la dominación española a lo largo de casi tres siglos.",
+        hitos: [
+          "1521 d.C.: Caída de Tenochtitlan; Zumpango contaba entonces con unos 30,000 habitantes"
+        ]
       }
     ]
   },
@@ -40,6 +116,46 @@ const epocasData = [
     id: "virreinato-independencia",
     titulo: "Virreinato e Independencia",
     lugares: [
+      {
+        id: "1524",
+        nombre: "1524 d.C.: Llegada de los primeros 12 religiosos franciscanos a México",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1526",
+        nombre: "1526 d.C.: Inicia el proceso de evangelización en Tzompanco",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1530",
+        nombre: "1530 d.C.: Aparición del corregimiento como autoridad española",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1536",
+        nombre: "1536 d.C.: División del territorio en alcaldías mayores bajo el virrey Antonio de Mendoza",
+        imagen: "https://via.placeholder.com/300x180"
+      },  
+      {
+        id: "1540",
+        nombre: "1540 d.C.: Zumpango y sus sujetos son encomendados a Gil González de Benavides",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1550",
+        nombre: "1550 d.C.: Surgimiento de los ayuntamientos de república",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1554",
+        nombre: "1554 d.C.: Diligencias de la Inquisición contra Hernando de Castilla por realizar ritos antiguos",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1555",
+        nombre: "1555 d.C.: Alonso de Ávila Alvarado modera la tasa de tributo a 19 pesos de oro",
+        imagen: "https://via.placeholder.com/300x180"
+      },
       {
         id: "parroquia-purisima",
         nombre: "Parroquia de la Purísima Concepción",
@@ -55,6 +171,106 @@ const epocasData = [
         resumen: "Santuario religioso con gran valor histórico.",
         descripcion: "Punto de reunión comunitaria e histórica del barrio de San Pedro.",
         hitos: ["Fiestas patronales", "Legado novohispano"]
+      },
+      {
+        id: "1564",
+        nombre: "1564 d.C.: Otorgamiento de licencia para tierras ejidales por don Luis de Velasco",
+        imagen: "https://via.placeholder.com/300x180"
+      },  
+      {
+        id: "1565",
+        nombre: "1565 d.C.: La tasación de tributos se eleva a 2,807 pesos",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1566",
+        nombre: "3 de agosto 1566 d.C.: Ejecución de los encomenderos Alonso y Gil González de Ávila por conspiración",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1567",
+        nombre: "1567 d.C.: Concesión de una usadera para el hospital de la comunidads",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1576",
+        nombre: "1576 d.C.: Los jesuitas establecen una estancia en Santa Lucía",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1579",
+        nombre: "1579 d.C.: Antonio de Galdó envía un informe destacando la dulzura y provecho de la laguna",
+        imagen: "https://via.placeholder.com/300x180"
+      },  
+      {
+        id: "1593",
+        nombre: "1593 d.C.: Zumpango es considerado alcaldía mayor y cabeza de partido",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1595",
+        nombre: "1595 - 1604 d.C.: Desalojo de naturales del barrio de San Sebastián por expansión jesuita",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1596",
+        nombre: "1596 d.C.: La mitad del barrio de Santiago Tlilac se transforma en hacienda",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1604",
+        nombre: "1604 d.C.: Conclusión de la congregación de pueblos, barrios y estancias alrededor de Zumpango",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1607",
+        nombre: "1607 - 1608 d.C.: Trabajos de desagüe de la laguna mediante la desviación del río Cuautitlán",
+        imagen: "https://via.placeholder.com/300x180"
+      },  
+      {
+        id: "1696",
+        nombre: "1696 d.C.: Naturales de Zumpango logran comprar la hacienda a don Agustín de San Cristóbal",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1698",
+        nombre: "1698 d.C.: San Andrés Jaltenco es transferido a pueblo con gobierno propio",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1707",
+        nombre: "1707 - 1722 d.C.: Ampliación de la nave mayor del templo parroquial en forma de cruz latina",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1711",
+        nombre: "1711 d.C.: Edictos para el reconocimiento territorial; la población de Zumpango era de 2,012 personas",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1712",
+        nombre: "1712 d.C.: Avalúo de los bienes de Juan Marcos Bautista",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1713",
+        nombre: "1713 d.C.: Reconstrucción del templo del barrio de Santa María y levantamiento de su torre",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1746",
+        nombre: "1746 d.C.: La población alcanza las 554 familias de naturales y 3,450 habitantes en total",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1750",
+        nombre: "1750 d.C.: Se agregan dos cuerpos y un remate al campanario del templo de la Purísima Concepción",
+        imagen: "https://via.placeholder.com/300x180"
+      },
+      {
+        id: "1786",
+        nombre: "4 de diciembre del 1786 d.C.: Zumpango ostenta el rango de subdelegación de intendencia",
+        imagen: "https://via.placeholder.com/300x180"
       }
     ]
   },
@@ -190,7 +406,6 @@ const epocasData = [
 
 // Muestra el menú principal con las épocas
 function mostrarMenu() {
-  // 1. Mostrar la sección introductoria al volver al menú principal
   const intro = document.querySelector('.seccion-intro');
   if (intro) {
     intro.style.display = 'flex'; 
@@ -227,21 +442,22 @@ function mostrarEpoca(idEpoca) {
   epoca.lugares.forEach((lugar, index) => {
     html += `
       <article class="tarjeta-detalle">
-        <!-- El botón de regresar solo se muestra en la primera tarjeta -->
         ${index === 0 ? `<button class="btn-azul" onclick="mostrarMenu()">← Volver al Menú</button>` : ''}
         
         <h2>${lugar.nombre}</h2>
-        <p class="subtitulo">${lugar.resumen}</p>
         
-        <!-- Muestra la imagen si existe -->
+        ${lugar.resumen ? `<p class="subtitulo">${lugar.resumen}</p>` : ''}
+        
         <img src="${lugar.imagen}" alt="${lugar.nombre}" class="img-detalle">
         
-        <p class="descripcion">${lugar.descripcion}</p>
+        ${lugar.descripcion ? `<p class="descripcion">${lugar.descripcion}</p>` : ''}
         
-        <h3>Hitos Destacados</h3>
-        <ul>
-          ${lugar.hitos ? lugar.hitos.map(hito => `<li>${hito}</li>`).join('') : ''}
-        </ul>
+        ${lugar.hitos && lugar.hitos.length > 0 ? `
+          <h3>Información Destacada</h3>
+          <ul>
+            ${lugar.hitos.map(hito => `<li>${hito}</li>`).join('')}
+          </ul>
+        ` : ''}
       </article>
     `;
   });
@@ -266,8 +482,8 @@ function buscarPorPalabraClave() {
     epoca.lugares.forEach(lugar => {
       const contenidoCompleto = (
         lugar.nombre + " " + 
-        lugar.resumen + " " + 
-        lugar.descripcion + " " + 
+        (lugar.resumen || "") + " " + 
+        (lugar.descripcion || "") + " " + 
         (lugar.hitos ? lugar.hitos.join(" ") : "")
       ).toLowerCase();
 
@@ -312,16 +528,19 @@ function mostrarResultadosBusqueda(resultados, termino) {
         ${index === 0 ? `<button class="btn-azul" onclick="mostrarMenu()">← Volver al Menú</button>` : ''}
         
         <h2>${lugar.nombre}</h2>
-        <p class="subtitulo">${lugar.resumen}</p>
+        
+        ${lugar.resumen ? `<p class="subtitulo">${lugar.resumen}</p>` : ''}
         
         <img src="${lugar.imagen}" alt="${lugar.nombre}" class="img-detalle">
         
-        <p class="descripcion">${lugar.descripcion}</p>
+        ${lugar.descripcion ? `<p class="descripcion">${lugar.descripcion}</p>` : ''}
         
-        <h3>Hitos Destacados</h3>
-        <ul>
-          ${lugar.hitos ? lugar.hitos.map(hito => `<li>${hito}</li>`).join('') : ''}
-        </ul>
+        ${lugar.hitos && lugar.hitos.length > 0 ? `
+          <h3>Información Destacada</h3>
+          <ul>
+            ${lugar.hitos.map(hito => `<li>${hito}</li>`).join('')}
+          </ul>
+        ` : ''}
       </article>
     `;
   });
