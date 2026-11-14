@@ -132,7 +132,14 @@ main {
   padding: 0 20px;
 }
 
-.grid-epocas, .grid-lugares {
+.grid-epocas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.grid-lugares {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
@@ -148,6 +155,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
+  margin: 0;
 }
 
 .card-epoca:hover, .card-lugar:hover {
@@ -260,14 +269,14 @@ main {
 
 /* --- Responsividad y Media Queries --- */
 
-/* Centrar la cuarta tarjeta en pantallas de escritorio */
-@media (min-width: 900px) {
-  .grid-epocas .card-epoca:nth-child(4) {
-    grid-column: 2;
+/* Tablets */
+@media (max-width: 900px) {
+  .grid-epocas {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsividad en Celulares */
+/* Celulares */
 @media (max-width: 768px) {
   .seccion-intro {
     flex-direction: column;
@@ -287,5 +296,11 @@ main {
   }
   .contenedor-busqueda input {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-epocas {
+    grid-template-columns: 1fr;
   }
 }
